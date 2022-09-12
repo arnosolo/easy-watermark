@@ -5,16 +5,25 @@
   "scripts": {
     "dev": "vite --host",
     "build": "vue-tsc --noEmit && vite build",
+    "genSitemap": "esno ./tools/sitemap/genSitemap",
     "preview": "vite preview"
   },
   "dependencies": {
+    "firebase": "^9.9.4",
     "vue": "^3.2.25",
+    "vue-i18n": "^9.2.2",
     "vue-router": "^4.0.15"
   },
   "devDependencies": {
+    "@types/fs-extra": "^9.0.13",
+    "@types/node": "^18.7.16",
     "@vitejs/plugin-vue": "^2.3.3",
     "autoprefixer": "^10.4.7",
+    "chalk": "^5.0.1",
+    "esno": "^0.16.3",
+    "fs-extra": "^10.1.0",
     "postcss": "^8.4.14",
+    "sitemap": "^7.1.1",
     "tailwindcss": "^3.0.24",
     "typescript": "^4.5.4",
     "vite": "^2.9.9",

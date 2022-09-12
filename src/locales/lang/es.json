@@ -1,0 +1,86 @@
+{
+  "lang": "es",
+  "common": {
+    "title": "Desenfocar imagen",
+    "getStarted": "Empezar",
+    "before": "Antes",
+    "after": "Después",
+    "language": "Idioma",
+    "copyright": "© 2018 - 2022 Todos los derechos reservados por unblur-photo.web.app",
+    "navItems": {
+      "statistic": "Estadística"
+    },
+    "tools": {
+      "title": "Instrumentos",
+      "item1": "herramienta de marca de agua",
+      "item2": "colorear foto"
+    },
+    "helps": {
+      "title": "Ayuda",
+      "item1": "Preguntas más frecuentes",
+      "item2": "Contáctenos"
+    }
+  },
+  "homePage": {
+    "topTitle": "Desenfocar la imagen con un clic",
+    "topTitleDescription": "Imagen desenfocada en segundos gratis.",
+    "uploadImage": "Cargar imagen",
+    "downloadUnbluredImage": "Descargar resultado",
+    "processing": "Procesando",
+    "success": "Éxito",
+    "failed": "Ha fallado",
+    "guidelines": {
+      "title": "¿Cómo desenfocar una imagen?",
+      "step1": {
+        "title": "Subir",
+        "content": "Sube una foto borrosa desde tu dispositivo."
+      },
+      "step2": {
+        "title": "Afilar",
+        "content": "Desenfocar automáticamente en 5 segundos."
+      },
+      "step3": {
+        "title": "Descargar",
+        "content": "Descarga la foto desenfocada."
+      }
+    },
+    "userComments": {
+      "title_l": "Sobre",
+      "title_r": "usuarios de todo el mundo usan Unblur Image",
+      "description": "Los comerciantes de comercio electrónico, personas influyentes, desarrolladores y agencias educativas utilizan Unblur Image para aumentar la productividad.",
+      "comment1": {
+        "user": "Sandram",
+        "userDescription": "Comerciante de Etsy",
+        "content": "GIMP y Photoshop están bien si solo tiene que hacer una o dos fotos por día, pero hacer 500 fotos de esta manera no es fácil. El software PicWish maneja esto bien."
+      },
+      "comment2": {
+        "user": "jill rescate",
+        "userDescription": "Consultor de marketing",
+        "content": "Acabo de encargar el trabajo de eliminación de fondo de fotos a alguien en Upwork antes, ya que no quiero pasar demasiado tiempo en esa tarea, y PicWish hace todo el trabajo por mí ahora."
+      },
+      "comment3": {
+        "user": "Joe Catizone",
+        "userDescription": "Propietario de marca elegante",
+        "content": "He estado jugando con PicWish y funciona muy bien y muy rápido. El poder de la IA, sin duda."
+      }
+    },
+    "photoSamples": {
+      "sample1": {
+        "title": "Desenfocar foto antigua",
+        "content": "¿Tiene algunas fotos antiguas que significan mucho para su familia pero no se ven claras? Esta tecnología podría ayudar."
+      },
+      "sample2": {
+        "title": "Mejorar la imagen de baja resolución",
+        "content": "Tomé esta foto hace muchos años, lástima que perdí mi teléfono y no hay respaldo. Así que solo puedo descargar una versión de baja resolución de Internet. Gracias a esta tecnología, se ve claro de nuevo."
+      },
+      "sample3": {
+        "title": "Desenfocar fotos de productos",
+        "content": "Ya sea para impresión o plataformas digitales, las imágenes de alta resolución son clave para la conversión y la experiencia del usuario. Aquí puede corregir la pixelación y el desenfoque de productos o cualquier fotografía con facilidad."
+      }
+    }
+  },
+  "notFoundPage": {
+    "title": "Página no encontrada",
+    "goHome": "Volver a casa"
+  }
+}

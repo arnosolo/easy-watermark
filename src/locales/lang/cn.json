@@ -1,0 +1,86 @@
+{
+  "lang": "zh-CN",
+  "common": {
+    "title": "取消模糊图像",
+    "getStarted": "开始使用",
+    "before": "前",
+    "after": "后",
+    "language": "语言",
+    "copyright": "© 2018 - 2022 unblur-photo.web.app 保留所有权利",
+    "navItems": {
+      "statistic": "统计"
+    },
+    "tools": {
+      "title": "工具",
+      "item1": "水印工具",
+      "item2": "为照片着色"
+    },
+    "helps": {
+      "title": "帮助",
+      "item1": "常问问题",
+      "item2": "联系我们"
+    }
+  },
+  "homePage": {
+    "topTitle": "一键去模糊图像",
+    "topTitleDescription": "在几秒钟内免费去模糊图像。",
+    "uploadImage": "上传图片",
+    "downloadUnbluredImage": "下载结果",
+    "processing": "加工",
+    "success": "成功",
+    "failed": "失败的",
+    "guidelines": {
+      "title": "如何取消模糊图像？",
+      "step1": {
+        "title": "上传",
+        "content": "从您的设备上传一张模糊的照片。"
+      },
+      "step2": {
+        "title": "锐化",
+        "content": "5 秒内自动取消模糊。"
+      },
+      "step3": {
+        "title": "下载",
+        "content": "下载未模糊的照片。"
+      }
+    },
+    "userComments": {
+      "title_l": "超过",
+      "title_r": "全球用户使用 Unblur Image",
+      "description": "电子商务商家、影响者、开发人员和教育机构使用 Unblur Image 来提高生产力。",
+      "comment1": {
+        "user": "桑德拉姆",
+        "userDescription": "Etsy 商人",
+        "content": "如果你每天只需要做一两张照片，GIMP 和 Photoshop 是可以的，但是用这种方式做 500 张照片并不容易。 PicWish 软件可以很好地处理这个问题。"
+      },
+      "comment2": {
+        "user": "吉尔赎金",
+        "userDescription": "营销顾问",
+        "content": "我之前只是将照片背景移除工作交给 Upwork 上的某个人，因为我不想在该任务上花费太多时间，而 PicWish 现在为我完成了所有工作。"
+      },
+      "comment3": {
+        "user": "乔·卡蒂佐",
+        "userDescription": "Poshmark 所有者",
+        "content": "我一直在玩 PicWish，它运行得非常好而且非常快。人工智能的力量，毋庸置疑。"
+      }
+    },
+    "photoSamples": {
+      "sample1": {
+        "title": "取消模糊旧照片",
+        "content": "您是否有一些对您的家人意义重大但看起来不清晰的旧照片，这项技术可能会有所帮助。"
+      },
+      "sample2": {
+        "title": "改善低分辨率图片",
+        "content": "这张照片是我多年前拍的，可惜手机丢了，也没有备份。所以我只能从网上下载低分辨率版本。感谢这项技术，它看起来又清晰了。"
+      },
+      "sample3": {
+        "title": "去模糊产品照片",
+        "content": "无论是印刷还是数字平台，高分辨率图像都是用户体验和转换的关键。在这里，您可以轻松修复产品或任何摄影的像素化和模糊问题。"
+      }
+    }
+  },
+  "notFoundPage": {
+    "title": "网页未找到",
+    "goHome": "回家"
+  }
+}

@@ -1,30 +1,15 @@
-<template>
-  <h1>Page not found</h1>
-  <p>You can choose <a @click="router.push('/')">go home</a></p>
-</template>
-
-<script lang="ts">
-import { reactive, ref} from 'vue'
-import { useRouter } from 'vue-router';
-
-export default {
-  name: "NotFound",
-  props: {
-  },
-  // @ts-ignore
-  setup(props) {
-    const router = useRouter()
-
-    function goHome() {
-      router.push('/')
-    }
-
-    return {
-      router,
-    }
-  }
-}
+<script setup lang="ts">
 </script>
 
-<style scoped>
-</style>
+<template>
+  <div class="flex flex-col items-center gap-5 px-8 py-16 w-full">
+    <h1 class="text-4xl font-bold text-gray-600">
+      {{ $t('notFoundPage.title') }}
+    </h1>
+    <router-link to="/">
+      <button class="text-2xl text-gray-600 underline">
+        {{ $t('notFoundPage.goHome') }}
+      </button>
+    </router-link>
+  </div>
+</template>

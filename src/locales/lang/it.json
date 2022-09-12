@@ -1,0 +1,86 @@
+{
+  "lang": "it",
+  "common": {
+    "title": "Sfoca immagine",
+    "getStarted": "Iniziare",
+    "before": "Prima",
+    "after": "Dopo",
+    "language": "Lingua",
+    "copyright": "© 2018 - 2022 Tutti i diritti riservati da unblur-photo.web.app",
+    "navItems": {
+      "statistic": "Statistica"
+    },
+    "tools": {
+      "title": "Strumenti",
+      "item1": "Strumento filigrana",
+      "item2": "Colora foto"
+    },
+    "helps": {
+      "title": "Aiuto",
+      "item1": "FAQ",
+      "item2": "Contattaci"
+    }
+  },
+  "homePage": {
+    "topTitle": "Sfoca l'immagine con un clic",
+    "topTitleDescription": "Sfocatura dell'immagine in pochi secondi gratuitamente.",
+    "uploadImage": "Carica immagine",
+    "downloadUnbluredImage": "Scarica il risultato",
+    "processing": "in lavorazione",
+    "success": "Successo",
+    "failed": "fallito",
+    "guidelines": {
+      "title": "Come sbloccare un'immagine?",
+      "step1": {
+        "title": "Caricamento",
+        "content": "Carica una foto sfocata dal tuo dispositivo."
+      },
+      "step2": {
+        "title": "Affilare",
+        "content": "Sfoca automaticamente in 5 secondi."
+      },
+      "step3": {
+        "title": "Scarica",
+        "content": "Scarica la foto non sfocata."
+      }
+    },
+    "userComments": {
+      "title_l": "Al di sopra di",
+      "title_r": "gli utenti di tutto il mondo utilizzano Unblur Image",
+      "description": "Commercianti di e-commerce, influencer, sviluppatori e agenzie educative utilizzano Unblur Image per aumentare la produttività.",
+      "comment1": {
+        "user": "Sandram",
+        "userDescription": "Commerciante Etsy",
+        "content": "GIMP e Photoshop vanno bene se devi fare solo una o due foto al giorno, ma fare 500 foto in questo modo non è facile. Il software PicWish lo gestisce bene."
+      },
+      "comment2": {
+        "user": "Jill Ransom",
+        "userDescription": "Consulente di marketing",
+        "content": "Ho appena coltivato il lavoro di rimozione dello sfondo della foto a qualcuno su Upwork prima perché non voglio dedicare troppo tempo a quell'attività e PicWish fa tutto il lavoro per me ora."
+      },
+      "comment3": {
+        "user": "Joe Catizone",
+        "userDescription": "Proprietario poshmark",
+        "content": "Ho giocato con PicWish e funziona molto bene e molto velocemente. Il potere dell'IA, senza dubbio."
+      }
+    },
+    "photoSamples": {
+      "sample1": {
+        "title": "Sfoca la vecchia foto",
+        "content": "Hai delle vecchie foto che significano molto per la tua famiglia ma non sembrano chiare, questa tecnologia potrebbe aiutare."
+      },
+      "sample2": {
+        "title": "Migliora l'immagine a bassa risoluzione",
+        "content": "Scatto questa foto molti anni fa, peccato di aver perso il telefono e non ci sono backup. Quindi posso scaricare solo una versione a bassa risoluzione da Internet. Grazie a questa tecnologia, sembra di nuovo chiaro."
+      },
+      "sample3": {
+        "title": "Sfocatura delle foto dei prodotti",
+        "content": "Che si tratti di stampa o piattaforme digitali, le immagini ad alta risoluzione sono fondamentali per l'esperienza utente e la conversione. Qui puoi correggere facilmente pixelation e sfocatura per prodotti o qualsiasi fotografia."
+      }
+    }
+  },
+  "notFoundPage": {
+    "title": "Pagina non trovata",
+    "goHome": "Torna a casa"
+  }
+}

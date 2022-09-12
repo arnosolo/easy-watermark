@@ -1,0 +1,86 @@
+{
+  "lang": "fr-FR",
+  "common": {
+    "title": "Annuler le flou de l'image",
+    "getStarted": "Commencer",
+    "before": "Avant de",
+    "after": "Après",
+    "language": "Langue",
+    "copyright": "© 2018 - 2022 Tous droits réservés par unblur-photo.web.app",
+    "navItems": {
+      "statistic": "Statistique"
+    },
+    "tools": {
+      "title": "Outils",
+      "item1": "Outil de filigrane",
+      "item2": "Coloriser la photo"
+    },
+    "helps": {
+      "title": "Aider",
+      "item1": "FAQ",
+      "item2": "Contactez-nous"
+    }
+  },
+  "homePage": {
+    "topTitle": "Déflouissez l'image en un clic",
+    "topTitleDescription": "Image de floutage en quelques secondes gratuitement.",
+    "uploadImage": "Télécharger l'image",
+    "downloadUnbluredImage": "Télécharger le résultat",
+    "processing": "Traitement",
+    "success": "Succès",
+    "failed": "Manqué",
+    "guidelines": {
+      "title": "Comment déflouter une image ?",
+      "step1": {
+        "title": "Télécharger",
+        "content": "Téléchargez une photo floue depuis votre appareil."
+      },
+      "step2": {
+        "title": "Aiguiser",
+        "content": "Déflou automatique en 5 secondes."
+      },
+      "step3": {
+        "title": "Télécharger",
+        "content": "Téléchargez la photo non floutée."
+      }
+    },
+    "userComments": {
+      "title_l": "Plus de",
+      "title_r": "les utilisateurs du monde entier utilisent Unblur Image",
+      "description": "Les marchands de commerce électronique, les influenceurs, les développeurs et les agences éducatives utilisent Unblur Image pour augmenter la productivité.",
+      "comment1": {
+        "user": "Sandram",
+        "userDescription": "Marchand Etsy",
+        "content": "GIMP et Photoshop sont OK si vous ne devez faire qu'une ou deux photos par jour, mais faire 500 photos de cette façon n'est pas facile. Le logiciel PicWish gère bien cela."
+      },
+      "comment2": {
+        "user": "Jill Rançon",
+        "userDescription": "Consultant en marketing",
+        "content": "Je viens de confier le travail de suppression de l'arrière-plan de la photo à quelqu'un sur Upwork auparavant, car je ne veux pas passer trop de temps sur cette tâche, et PicWish fait tout le travail pour moi maintenant."
+      },
+      "comment3": {
+        "user": "Joe Catizone",
+        "userDescription": "Propriétaire de Poshmark",
+        "content": "J'ai joué avec PicWish, et ça marche très bien et très vite. La puissance de l'IA, sans aucun doute."
+      }
+    },
+    "photoSamples": {
+      "sample1": {
+        "title": "Supprimer le flou d'une ancienne photo",
+        "content": "Avez-vous de vieilles photos qui comptent beaucoup pour votre famille mais qui ne sont pas claires, cette technologie pourrait vous aider."
+      },
+      "sample2": {
+        "title": "Améliorer l'image en basse résolution",
+        "content": "J'ai pris cette photo il y a de nombreuses années, dommage que j'aie perdu mon téléphone et qu'il n'y ait pas de sauvegarde. Je ne peux donc télécharger qu'une version basse résolution sur Internet. Grâce à cette technologie, il semble clair à nouveau."
+      },
+      "sample3": {
+        "title": "Déflouage des photos de produits",
+        "content": "Que ce soit pour l'impression ou les plateformes numériques, les images haute résolution sont essentielles à l'expérience utilisateur et à la conversion. Ici, vous pouvez facilement corriger la pixellisation et le flou des produits ou de toute photographie."
+      }
+    }
+  },
+  "notFoundPage": {
+    "title": "Page non trouvée",
+    "goHome": "Rentrer à la maison"
+  }
+}

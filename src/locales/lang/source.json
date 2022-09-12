@@ -1,0 +1,85 @@
+{
+  "common": {
+    "title": "UnBlur Image",
+    "navItems": {
+      "statistic": "Statistic"
+    },
+    "getStarted": "Get started",
+    "before": "Before",
+    "after": "After",
+    "language": "Language",
+    "tools": {
+      "title": "Tools",
+      "item1": "Watermark tool",
+      "item2": "Colorize photo"
+    },
+    "helps": {
+      "title": "Help",
+      "item1": "FAQ",
+      "item2": "Contact us"
+    },
+    "copyright": "© 2018 - 2022 All rights reserved by unblur-photo.web.app"
+  },
+  "homePage": {
+    "topTitle": "Unblur image with one click",
+    "topTitleDescription": "Deblurring image in seconds for free.",
+    "uploadImage": "Upload Image",
+    "downloadUnbluredImage": "Download Result",
+    "processing": "Processing",
+    "success": "Success",
+    "failed": "Failed",
+    "guidelines": {
+      "title": "How to unblur an image?",
+      "step1": {
+        "title": "Upload",
+        "content": "Upload a blurry photo from your device."
+      },
+      "step2": {
+        "title": "Sharpen",
+        "content": "Automatically unblur in 5 seconds."
+      },
+      "step3": {
+        "title": "Download",
+        "content": "Download the unblurred photo."
+      }
+    },
+    "photoSamples": {
+      "sample1": {
+        "title": "Unblur old photo",
+        "content": "Do you have some old photos that means a lot to your family but don't look clear, this technology might help."
+      },
+      "sample2": {
+        "title": "Improve low resolution picture",
+        "content": "I take this photo many years ago, too bad I lost my phone and there is no backup. So I can only download a low resolution version from Internet. Thanks this technology, it looks clear again."
+      },
+      "sample3": {
+        "title": "Deblurring product photos",
+        "content": "Whether for printing or digital platforms, high-resolution images are key to user experience and conversion. Here you can fix pixelation and blur for products or any photography with ease."
+      }
+    },
+    "userComments": {
+      "title_l": "Over",
+      "title_r": "users worldwide use Unblur Image",
+      "description": "Ecommerce merchants, influencers, developers, and educational agencies use Unblur Image to boost productivity.",
+      "comment1": {
+        "user": "Sandram",
+        "userDescription": "Etsy Merchant",
+        "content": "GIMP and Photoshop are OK if you only have to do one or two photos per day, but doing 500 photos this way is not easy. PicWish software handles this well. "
+      },
+      "comment2": {
+        "user": "Jill Ransom",
+        "userDescription": "Marketing consultant",
+        "content": "I just farm the photo background removal work to someone on Upwork before as I do not want to spend too much time on that task, and PicWish does all the work for me now. "
+      },
+      "comment3": {
+        "user": "Joe Catizone",
+        "userDescription": "Poshmark owner",
+        "content": "I have been playing around with PicWish, and it works really well and really fast. The power of AI, no doubt. "
+      }
+    }
+  },
+  "notFoundPage": {
+    "title": "Page not Found",
+    "goHome": "Return home"
+  }
+}

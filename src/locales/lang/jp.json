@@ -1,0 +1,86 @@
+{
+  "lang": "ja",
+  "common": {
+    "title": "画像のぼかしを解除",
+    "getStarted": "始めましょう",
+    "before": "前",
+    "after": "後",
+    "language": "言語",
+    "copyright": "© 2018 - 2022 unblur-photo.web.app が無断複写・転載を禁じます",
+    "navItems": {
+      "statistic": "統計"
+    },
+    "tools": {
+      "title": "ツール",
+      "item1": "透かしツール",
+      "item2": "写真の色付け"
+    },
+    "helps": {
+      "title": "ヘルプ",
+      "item1": "よくある質問",
+      "item2": "お問い合わせ"
+    }
+  },
+  "homePage": {
+    "topTitle": "ワンクリックで画像のブレを解消",
+    "topTitleDescription": "無料で数秒で画像のブレを除去します。",
+    "uploadImage": "画像をアップロード",
+    "downloadUnbluredImage": "ダウンロード結果",
+    "processing": "処理",
+    "success": "成功",
+    "failed": "失敗した",
+    "guidelines": {
+      "title": "画像のブレを解消するには？",
+      "step1": {
+        "title": "アップロード",
+        "content": "デバイスからぼやけた写真をアップロードします。"
+      },
+      "step2": {
+        "title": "研ぐ",
+        "content": "5 秒で自動的にぼかしを解除します。"
+      },
+      "step3": {
+        "title": "ダウンロード",
+        "content": "ブレていない写真をダウンロードします。"
+      }
+    },
+    "userComments": {
+      "title_l": "以上",
+      "title_r": "世界中のユーザーがUnblur Imageを使用",
+      "description": "e コマース マーチャント、インフルエンサー、開発者、教育機関は、Unblur Image を使用して生産性を高めています。",
+      "comment1": {
+        "user": "サンドラム",
+        "userDescription": "Etsy マーチャント",
+        "content": "GIMP や Photoshop は、1 日に 1 枚か 2 枚の写真を撮るだけなら問題ありませんが、この方法で 500 枚の写真を撮るのは簡単ではありません。 PicWish ソフトウェアはこれをうまく処理します。"
+      },
+      "comment2": {
+        "user": "ジル・ランサム",
+        "userDescription": "マーケティングコンサルタント",
+        "content": "写真の背景の削除作業にあまり時間をかけたくないので、以前は Upwork の誰かに写真の背景の削除作業を任せていましたが、現在は PicWish がすべての作業を行ってくれます。"
+      },
+      "comment3": {
+        "user": "ジョー・カティゾン",
+        "userDescription": "Poshmark 所有者",
+        "content": "私は PicWish をいじってみましたが、非常にうまく機能し、非常に高速です。間違いなくAIの力。"
+      }
+    },
+    "photoSamples": {
+      "sample1": {
+        "title": "古い写真のぼかしを解除",
+        "content": "家族にとって大切な古い写真を何枚か持っていますが、鮮明に見えません。このテクノロジーが役立つかもしれません。"
+      },
+      "sample2": {
+        "title": "低解像度の画像を改善する",
+        "content": "この写真は何年も前に撮ったものですが、残念ながら携帯電話をなくしてしまい、バックアップがありません。そのため、インターネットから低解像度バージョンしかダウンロードできません。この技術のおかげで、またくっきり見えます。"
+      },
+      "sample3": {
+        "title": "商品写真のブレ除去",
+        "content": "印刷プラットフォームでもデジタル プラットフォームでも、高解像度の画像はユーザー エクスペリエンスと変換の鍵となります。ここでは、製品や写真のピクセル化やぼやけを簡単に修正できます。"
+      }
+    }
+  },
+  "notFoundPage": {
+    "title": "ページが見つかりません",
+    "goHome": "帰宅"
+  }
+}

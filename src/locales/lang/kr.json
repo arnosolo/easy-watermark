@@ -1,0 +1,86 @@
+{
+  "lang": "ko",
+  "common": {
+    "title": "이미지 흐림 해제",
+    "getStarted": "시작하다",
+    "before": "전에",
+    "after": "후에",
+    "language": "언어",
+    "copyright": "© 2018 - 2022 판권 소유 unblur-photo.web.app",
+    "navItems": {
+      "statistic": "통계량"
+    },
+    "tools": {
+      "title": "도구",
+      "item1": "워터마크 도구",
+      "item2": "사진에 색을 입히다"
+    },
+    "helps": {
+      "title": "돕다",
+      "item1": "자주하는 질문",
+      "item2": "문의하기"
+    }
+  },
+  "homePage": {
+    "topTitle": "한 번의 클릭으로 이미지 흐림 제거",
+    "topTitleDescription": "무료로 몇 초 만에 이미지를 흐리게 처리합니다.",
+    "uploadImage": "이미지 업로드",
+    "downloadUnbluredImage": "다운로드 결과",
+    "processing": "처리",
+    "success": "성공",
+    "failed": "실패한",
+    "guidelines": {
+      "title": "이미지를 흐리게 하는 방법?",
+      "step1": {
+        "title": "업로드",
+        "content": "기기에서 흐릿한 사진을 업로드하세요."
+      },
+      "step2": {
+        "title": "갈다",
+        "content": "5초 안에 자동으로 흐릿함을 제거합니다."
+      },
+      "step3": {
+        "title": "다운로드",
+        "content": "흐릿하지 않은 사진을 다운로드합니다."
+      }
+    },
+    "userComments": {
+      "title_l": "위에",
+      "title_r": "전 세계 사용자가 Unblur Image를 사용합니다.",
+      "description": "전자 상거래 판매자, 영향력 있는 사람, 개발자 및 교육 기관은 Unblur Image를 사용하여 생산성을 높입니다.",
+      "comment1": {
+        "user": "샌드람",
+        "userDescription": "엣시 상인",
+        "content": "김프나 포토샵은 하루에 한두 장만 하면 되지만, 이런 식으로 500장을 하는 것은 쉽지 않다. PicWish 소프트웨어는 이를 잘 처리합니다."
+      },
+      "comment2": {
+        "user": "질 랜섬",
+        "userDescription": "마케팅 컨설턴트",
+        "content": "나는 그 작업에 너무 많은 시간을 할애하고 싶지 않기 때문에 이전에 Upwork에 있는 누군가에게 사진 배경 제거 작업을 파밍했고 이제 PicWish가 나를 위해 모든 작업을 수행합니다."
+      },
+      "comment3": {
+        "user": "조 캐티존",
+        "userDescription": "포쉬마크 소유자",
+        "content": "저는 PicWish를 가지고 놀았고 정말 잘 작동하고 정말 빠릅니다. AI의 힘, 의심의 여지가 없습니다."
+      }
+    },
+    "photoSamples": {
+      "sample1": {
+        "title": "오래된 사진의 흐림 제거",
+        "content": "가족에게 많은 의미가 있지만 선명하지 않은 오래된 사진이 있습니까? 이 기술이 도움이 될 수 있습니다."
+      },
+      "sample2": {
+        "title": "저해상도 사진 개선",
+        "content": "나는 이 사진을 몇 년 전에 찍었습니다. 안타깝게도 휴대전화를 잃어버렸고 백업이 없습니다. 그래서 인터넷에서 저해상도 버전만 다운로드할 수 있습니다. 이 기술 덕분에 다시 선명하게 보입니다."
+      },
+      "sample3": {
+        "title": "제품 사진 흐림 제거",
+        "content": "인쇄용이든 디지털 플랫폼용이든 고해상도 이미지는 사용자 경험과 전환의 핵심입니다. 여기에서 제품 또는 모든 사진의 픽셀화 및 흐림을 쉽게 수정할 수 있습니다."
+      }
+    }
+  },
+  "notFoundPage": {
+    "title": "페이지를 찾을 수 없음",
+    "goHome": "집에 옴"
+  }
+}
