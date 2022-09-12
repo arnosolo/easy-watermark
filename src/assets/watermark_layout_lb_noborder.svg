@@ -1,0 +1,12 @@
+<svg width="60.00000000000001" height="80" xmlns="http://www.w3.org/2000/svg">
+ <title>watermark_layout_lb_noborder</title>
+
+ <g>
+  <title>Layer 1</title>
+  <g id="svg_10">
+   <rect fill="#fff" stroke="#000" x="6" y="64" width="20" height="10" id="svg_2" rx="2" stroke-dasharray="2,2"/>
+   <line fill="none" stroke="#000" x1="8.54387" y1="67.22942" x2="21.8772" y2="67.22942" id="svg_5"/>
+   <line fill="none" stroke="#000" x1="8.54387" y1="70.73819" x2="18.02405" y2="70.73819" id="svg_6"/>
+  </g>
+ </g>
+</svg>

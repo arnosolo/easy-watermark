@@ -1,0 +1,13 @@
+<svg width="64" height="84.00000000000001" xmlns="http://www.w3.org/2000/svg">
+ <title>watermark_layout_center</title>
+
+ <g>
+  <title>Layer 1</title>
+  <rect rx="7" id="svg_1" height="80" width="60" y="2.09641" x="2.43581" stroke="#000" fill="#fff"/>
+  <g id="svg_10">
+   <rect stroke-dasharray="2,2" rx="2" id="svg_2" height="10" width="20" y="36.9233" x="22.15373" stroke="#000" fill="#fff"/>
+   <line id="svg_5" y2="40.15272" x2="38.03093" y1="40.15272" x1="24.6976" stroke="#000" fill="none"/>
+   <line id="svg_6" y2="43.66149" x2="34.17778" y1="43.66149" x1="24.6976" stroke="#000" fill="none"/>
+  </g>
+ </g>
+</svg>

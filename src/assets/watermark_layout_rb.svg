@@ -1,0 +1,13 @@
+<svg width="64" height="84.00000000000001" xmlns="http://www.w3.org/2000/svg">
+ <title>watermark_layout_rb</title>
+
+ <g>
+  <title>Layer 1</title>
+  <rect rx="7" id="svg_1" height="80" width="60" y="2.09641" x="2.12812" stroke="#000" fill="#fff"/>
+  <g id="svg_10">
+   <rect stroke-dasharray="2,2" rx="2" id="svg_2" height="10" width="20" y="64" x="36" stroke="#000" fill="#fff"/>
+   <line id="svg_5" y2="67.22942" x2="51.8772" y1="67.22942" x1="38.54387" stroke="#000" fill="none"/>
+   <line id="svg_6" y2="70.73819" x2="48.02405" y1="70.73819" x1="38.54387" stroke="#000" fill="none"/>
+  </g>
+ </g>
+</svg>
