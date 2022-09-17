@@ -1,7 +1,8 @@
 <script setup lang="ts">
-import { onMounted, ref } from 'vue'
+import { onMounted } from 'vue'
 import { useRoute } from 'vue-router';
 import { setLanguage } from '/@/locales/i18n';
+import WatermarkDeployer from "/@/components/WatermarkDeployer.vue";
 
 const { params } = useRoute()
 
@@ -11,7 +12,9 @@ onMounted(() => {
 </script>
 
 <template>
-  <h1>Home page</h1>
+  <div class="py-6">
+    <WatermarkDeployer />
+  </div>
 </template>
 
 <style scoped>

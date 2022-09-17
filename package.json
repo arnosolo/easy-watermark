@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "firebase": "^9.9.4",
+    "compressorjs": "^1.1.1",
     "vue": "^3.2.25",
     "vue-i18n": "^9.2.2",
     "vue-router": "^4.0.15"

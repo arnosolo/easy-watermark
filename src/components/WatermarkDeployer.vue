@@ -14,12 +14,13 @@ import watermark_layout_center from '../assets/watermark_layout_center_noborder.
 import watermark_layout_rb from '../assets/watermark_layout_rb_noborder.svg'
 import watermark_layout_rt from '../assets/watermark_layout_rt_noborder.svg'
 import color_picker_img from '../assets/color_picker.svg'
+import { getImageSrc } from '/@/utils/image';
 
-const props = defineProps<{
-  selectedFiles: Array<File>,
-  setSelectedFile: (newFiles: Array<File>) => void,
-}>()
-
+const selectedFiles = reactive<Array<File>>([])
+function setSelectedFile(newFiles: File[]) {
+  selectedFiles.length = 0;
+  selectedFiles.push(...newFiles);
+}
 let pickColorMode = ref(false)
 const image_canvas = ref<HTMLCanvasElement>()
 const watermark_canvas = ref<HTMLCanvasElement>()
@@ -35,26 +36,27 @@ const waterMark = reactive<WaterMark>(new WaterMark(watermark_canvas.value, {
   position: new Vector2(0, 0)
 }))
 
-onMounted(() => {
-  if (props.selectedFiles.length > 0) {
-    redrawAll(props.selectedFiles)
+onMounted(async () => {
+  let imageUrl = getImageSrc('sample.jpeg')
+  if (selectedFiles.length > 0) {
+    imageUrl = await readFileAsync(selectedFiles[0])
+    currentFile = selectedFiles[0]
   }
+  redrawAll(imageUrl)
 })
 
-watch(props.selectedFiles, async (newVal, oldVal) => {
-  redrawAll(newVal)
+watch(selectedFiles, async (newVal, oldVal) => {
+  let imageUrl = await readFileAsync(selectedFiles[0])
+  currentFile = selectedFiles[0]
+  redrawAll(imageUrl)
 })
 
 let textSizeMax = ref(50)
 let iconSizeMax = ref(50)
 
-async function redrawAll(newFiles: Array<File>) {
+async function redrawAll(imageUrl: string) {
   try {
-    let imageUrl = await readFileAsync(newFiles[0])
     myImage = await loadImage(imageUrl)
-    currentFile = newFiles[0]
-    console.log(currentFile);
-
 
     if (image_canvas.value == undefined || watermark_canvas.value == undefined) {
       console.error("Can't find canvas")
@@ -313,7 +315,7 @@ function togglePickColorMode() {
 
 <template>
   <div class="flex flex-wrap justify-center w-screen">
-    <div class="static">
+    <div class="relative">
       <canvas class="w-screen sm:w-96 md:w-[30rem] border " ref="image_canvas"></canvas>
       <canvas class="w-screen sm:w-96 md:w-[30rem] border absolute top-0" ref="watermark_canvas"></canvas>
     </div>
