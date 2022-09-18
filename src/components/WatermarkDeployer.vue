@@ -2,25 +2,15 @@
 import { onMounted, reactive, ref, watch } from 'vue'
 import { readFileAsync } from "../utils/readFile";
 import { loadImage } from "../utils/loadImage";
-import { WaterMark, WaterMarkConfig } from "../types/WaterMark";
+import { WaterMark } from "../types/WaterMark";
 import { Vector2 } from '../types/Vector';
-import ImagePicker from "./ImagePicker.vue";
-import SizePicker from "./SizePicker.vue";
 import ColorBlock from "./ColorBlock/index.vue";
 import { ColorOption } from "./ColorBlock/ColorOption";
-import watermark_layout_lb from '../assets/watermark_layout_lb_noborder.svg'
-import watermark_layout_lt from '../assets/watermark_layout_lt_noborder.svg'
-import watermark_layout_center from '../assets/watermark_layout_center_noborder.svg'
-import watermark_layout_rb from '../assets/watermark_layout_rb_noborder.svg'
-import watermark_layout_rt from '../assets/watermark_layout_rt_noborder.svg'
-import color_picker_img from '../assets/color_picker.svg'
 import { getImageSrc } from '/@/utils/image';
+import { useFilesPicker } from '../composables/useFilePicker';
 
-const selectedFiles = reactive<Array<File>>([])
-function setSelectedFile(newFiles: File[]) {
-  selectedFiles.length = 0;
-  selectedFiles.push(...newFiles);
-}
+const { files, pickFiles } = useFilesPicker()
+
 let pickColorMode = ref(false)
 const image_canvas = ref<HTMLCanvasElement>()
 const watermark_canvas = ref<HTMLCanvasElement>()
@@ -38,16 +28,16 @@ const waterMark = reactive<WaterMark>(new WaterMark(watermark_canvas.value, {
 
 onMounted(async () => {
   let imageUrl = getImageSrc('sample.jpeg')
-  if (selectedFiles.length > 0) {
-    imageUrl = await readFileAsync(selectedFiles[0])
-    currentFile = selectedFiles[0]
+  if (files.value.length > 0) {
+    imageUrl = await readFileAsync(files.value[0])
+    currentFile = files.value[0]
   }
   redrawAll(imageUrl)
 })
 
-watch(selectedFiles, async (newVal, oldVal) => {
-  let imageUrl = await readFileAsync(selectedFiles[0])
-  currentFile = selectedFiles[0]
+watch(() => files.value, async (newVal, oldVal) => {
+  let imageUrl = await readFileAsync(files.value[0])
+  currentFile = files.value[0]
   redrawAll(imageUrl)
 })
 
@@ -61,15 +51,15 @@ async function redrawAll(imageUrl: string) {
     if (image_canvas.value == undefined || watermark_canvas.value == undefined) {
       console.error("Can't find canvas")
     } else {
-      let imageLayer = image_canvas.value
-      let watermarkLayer = watermark_canvas.value
-      let imageCtx = imageLayer.getContext('2d')
-      let watermarkLayerCtx = watermarkLayer.getContext('2d')
-      imageLayer.width = myImage.width;
-      imageLayer.height = myImage.height;
-      watermarkLayer.width = myImage.width;
-      watermarkLayer.height = myImage.height;
-      waterMark.canvas = watermarkLayer
+      let imageCanvas = image_canvas.value
+      let watermarkCanvas = watermark_canvas.value
+      let imageCtx = imageCanvas.getContext('2d')
+      let watermarkLayerCtx = watermarkCanvas.getContext('2d')
+      imageCanvas.width = myImage.width;
+      imageCanvas.height = myImage.height;
+      watermarkCanvas.width = myImage.width;
+      watermarkCanvas.height = myImage.height;
+      waterMark.canvas = watermarkCanvas
 
       if (imageCtx && watermarkLayerCtx) {
         waterMark.textSize = Math.floor(myImage.width * 0.03)
@@ -85,7 +75,7 @@ async function redrawAll(imageUrl: string) {
         changeWatermarkLayout('center')
 
         // handleMouseDown
-        watermarkLayer.addEventListener('mousedown', evt => {
+        watermarkCanvas.addEventListener('mousedown', evt => {
           handleMouseDown(evt.clientX, evt.clientY)
           if(pickColorMode.value) {
             pickColorMode.value = false
@@ -93,29 +83,29 @@ async function redrawAll(imageUrl: string) {
           }
         })
 
-        watermarkLayer.addEventListener('touchend', evt => {
+        watermarkCanvas.addEventListener('touchend', evt => {
           handleMouseDown(evt.changedTouches[0].clientX, evt.changedTouches[0].clientY)
         })
 
         const handleMouseDown = (clientX: number, clientY: number) => {
-          const rect = watermarkLayer.getBoundingClientRect()
+          const rect = watermarkCanvas.getBoundingClientRect()
           let mousePos = new Vector2(
-            (clientX - rect.left) * (watermarkLayer.width / rect.width),
-            (clientY - rect.top) * (watermarkLayer.height / rect.height)
+            (clientX - rect.left) * (watermarkCanvas.width / rect.width),
+            (clientY - rect.top) * (watermarkCanvas.height / rect.height)
           )
           waterMark.isSelected = waterMark.isMouseAbove(mousePos)
           Vector2.sub(mousePos, waterMark.position, waterMark.distanceToMouse)
         }
 
         // handleMouseMove
-        watermarkLayer.addEventListener('mousemove', evt => {
+        watermarkCanvas.addEventListener('mousemove', evt => {
           handleMouseMove(evt.clientX, evt.clientY)
           if(pickColorMode.value) {
-            let ctx = imageLayer.getContext('2d')
-            const rect = imageLayer.getBoundingClientRect()
+            let ctx = imageCanvas.getContext('2d')
+            const rect = imageCanvas.getBoundingClientRect()
             let mousePos = new Vector2(
-              (evt.clientX - rect.left) * (imageLayer.width / rect.width),
-              (evt.clientY - rect.top) * (imageLayer.height / rect.height)
+              (evt.clientX - rect.left) * (imageCanvas.width / rect.width),
+              (evt.clientY - rect.top) * (imageCanvas.height / rect.height)
             )
             if(ctx) {
               const colorData = ctx.getImageData(mousePos.x, mousePos.y, 1, 1).data
@@ -124,35 +114,35 @@ async function redrawAll(imageUrl: string) {
           }
         })
 
-        watermarkLayer.addEventListener('touchmove', evt => {
+        watermarkCanvas.addEventListener('touchmove', evt => {
           handleMouseDown(evt.changedTouches[0].clientX, evt.changedTouches[0].clientY)
         })
 
         const handleMouseMove = (clientX: number, clientY: number) => {
           if (waterMark.isSelected) {
-            const rect = watermarkLayer.getBoundingClientRect()
+            const rect = watermarkCanvas.getBoundingClientRect()
             let mousePos = new Vector2(
-              (clientX - rect.left) * (watermarkLayer.width / rect.width),
-              (clientY - rect.top) * (watermarkLayer.height / rect.height)
+              (clientX - rect.left) * (watermarkCanvas.width / rect.width),
+              (clientY - rect.top) * (watermarkCanvas.height / rect.height)
             )
             Vector2.sub(mousePos, waterMark.distanceToMouse, waterMark.position)
-            watermarkLayerCtx?.clearRect(0, 0, watermarkLayer.width, watermarkLayer.height)
+            watermarkLayerCtx?.clearRect(0, 0, watermarkCanvas.width, watermarkCanvas.height)
             waterMark.show()
           }
         }
 
         // handleMouseUp
-        watermarkLayer.addEventListener('mouseup', evt => {
+        watermarkCanvas.addEventListener('mouseup', evt => {
           handleMouseUp()
         })
 
-        watermarkLayer.addEventListener('touchend', evt => {
+        watermarkCanvas.addEventListener('touchend', evt => {
           handleMouseUp()
         })
 
         const handleMouseUp = () => {
           waterMark.isSelected = false
-          watermarkLayerCtx?.clearRect(0, 0, watermarkLayer.width, watermarkLayer.height)
+          watermarkLayerCtx?.clearRect(0, 0, watermarkCanvas.width, watermarkCanvas.height)
           watermarkLayerCtx?.drawImage(myImage, 0, 0)
           waterMark.show()
         }
@@ -202,46 +192,47 @@ function downloadImage() {
   }
 }
 
+type LayoutType = 'left_top' | 'left_bottom' | 'center' | 'right_top' | 'right_bottom';
+
 interface LayoutOption {
   src: string,
   value: LayoutType,
-  isActived: boolean,
+  isActive: boolean,
 }
-type LayoutType = 'left_top' | 'left_bottom' | 'center' | 'right_top' | 'right_bottom';
 
 let layoutOptions = reactive<Array<LayoutOption>>([
   {
-    src: watermark_layout_lb,
+    src: getImageSrc('watermark_layout_lb_noborder.svg'),
     value: 'left_bottom',
-    isActived: true,
+    isActive: true,
   },
   {
-    src: watermark_layout_lt,
+    src: getImageSrc('watermark_layout_lt_noborder.svg'),
     value: 'left_top',
-     isActived: false,
+    isActive: false,
   },
   {
-    src: watermark_layout_center,
+    src: getImageSrc('watermark_layout_center_noborder.svg'),
     value: 'center',
-     isActived: false,
+    isActive: false,
   },
   {
-    src: watermark_layout_rt,
+    src: getImageSrc('watermark_layout_rt_noborder.svg'),
     value: 'right_top',
-     isActived: false,
+    isActive: false,
   },
   {
-    src: watermark_layout_rb,
+    src: getImageSrc('watermark_layout_rb_noborder.svg'),
     value: 'right_bottom',
-     isActived: false,
+    isActive: false,
   },
 ])
 
 function changeWatermarkLayout(layoutStr: string) {
   let layout = layoutOptions.find(opt => opt.value == layoutStr)
-  if(layout && !layout.isActived) {
-    layoutOptions.forEach(opt => opt.isActived = false)
-    layout.isActived = true
+  if(layout && !layout.isActive) {
+    layoutOptions.forEach(opt => opt.isActive = false)
+    layout.isActive = true
     switch (layout.value) {
       case 'left_top':
         waterMark.position = new Vector2(
@@ -320,8 +311,13 @@ function togglePickColorMode() {
       <canvas class="w-screen sm:w-96 md:w-[30rem] border absolute top-0" ref="watermark_canvas"></canvas>
     </div>
       <!-- Control Panel -->
-    <div class="flex flex-col gap-2 p-2 font-mono">
-      <ImagePicker :setSelectedFile="setSelectedFile" :selectedFiles="selectedFiles"></ImagePicker>
+    <div class="flex flex-col gap-2 pt-4 font-mono">
+      <button
+        class="btn-primary max-w-xs"
+        @click="pickFiles({accept: ['jpg', 'jpeg', 'png']})"
+      >
+        Choose Image
+      </button>
       <div class="flex flex-wrap gap-1 items-center">
         <img class="w-6" src="../assets/image.svg" @click="selectIcon" alt="icon image">
         <p class="text-lg">Icon</p>
@@ -330,10 +326,8 @@ function togglePickColorMode() {
         <input  type="number" v-model="waterMark.iconSize" step="5" class="w-8">
         <input class="invisible w-0" type="file" ref="icon_picker" accept="image/*" @change="handleIconChange">
       </div>
-      <!-- <SizePicker :sizeNum="waterMarkConfig.iconSize" @num-change="setIconSize"></SizePicker> -->
       <div class="flex flex-wrap gap-1">
         <img class="w-6 p-0.5" src="../assets/input.svg" alt="text image">
-        <p class="text-lg">Text</p>
         <input v-model="waterMark.textContent" type="text" class="w-28 text-lg" placeholder="watermark">
         <input type="range" v-model="waterMark.textSize" class="w-36" min="10" :max="textSizeMax" step="5"/>
         <input type="number" v-model="waterMark.textSize" step="5" class="w-8">
@@ -370,9 +364,9 @@ function togglePickColorMode() {
           :src="layout.src" :alt="layout.value" 
           class="pt-1 rounded-lg border"
           :class="{
-            'border-2': layout.isActived,
-            'border-blue-500': layout.isActived,
-            'border-gray-500': !layout.isActived,
+            'border-2': layout.isActive,
+            'border-blue-500': layout.isActive,
+            'border-gray-500': !layout.isActive,
           }"
         >
       </div>
@@ -389,14 +383,13 @@ function togglePickColorMode() {
 </template>
 
 <style scoped>
-input[type=number] {
-  -moz-appearance: textfield;
-}
+  input[type=number] {
+    -moz-appearance: textfield;
+  }
 
-input[type=number]::-webkit-inner-spin-button,
-input[type=number]::-webkit-outer-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
-}
-
+  input[type=number]::-webkit-inner-spin-button,
+  input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
 </style>
